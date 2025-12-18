@@ -3,6 +3,12 @@ set -e
 
 # Check if Odoo database is already initialized
 # This script ensures initialization only runs once
+#
+# Windows Compatibility Note:
+# This script runs inside a Linux Docker container, so it works on Windows hosts.
+# However, ensure the file uses LF (Unix) line endings, not CRLF (Windows).
+# Git should handle this automatically if .gitattributes is configured.
+# If you edit this file on Windows, ensure your editor saves with LF line endings.
 
 DB_NAME="${DB_NAME:-odoo}"
 INIT_FLAG_FILE="/var/lib/odoo/.odoo_initialized"
