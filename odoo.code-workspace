@@ -10,6 +10,9 @@
 	],
 	"settings": {
 		"python.defaultInterpreterPath": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+		"python.analysis.extraPaths": [
+			"${workspaceFolder}"
+		],
 		"git.detectSubmodules": true,
 		"git.autoRepositoryDetection": true
 	}
