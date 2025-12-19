@@ -1,0 +1,45 @@
+# Odoo Docker Compose Configuration - Database Only
+# This file runs only the database container for IDE/host development
+# 
+# Usage:
+#   docker-compose -f docker-compose-db-only.yml -p odoo-db-only up -d
+#   docker-compose -f docker-compose-db-only.yml -p odoo-db-only down
+#
+# The -p flag sets a unique project name to avoid conflicts with docker-compose-full.yml
+#
+# Environment Variables:
+#   ODOO_CUSTOM_ADDONS_PATH - Path to custom addons directory (default: /Users/nick/PycharmProjects/odoo/custom-addons)
+#   ODOO_ENTERPRISE_ADDONS_PATH - Path to enterprise addons directory (default: /Users/nick/PycharmProjects/enterprise-19.0)
+#
+# To customize paths, create a .env file in this directory with:
+#   ODOO_CUSTOM_ADDONS_PATH=/your/path/to/custom-addons
+#   ODOO_ENTERPRISE_ADDONS_PATH=/your/path/to/enterprise-19.0
+#
+# Or set them as environment variables before running docker-compose
+
+name: odoo-db-only
+
+services:
+  db-only:
+    image: pgvector/pgvector:pg16
+    container_name: odoo19-db-only
+    restart: unless-stopped
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+      POSTGRES_DB: odoo
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - odoo19-db-only-data:/var/lib/postgresql/data/pgdata
+      # Ensure the pgvector extension is created on first init of the "odoo" database
+      - ./config/initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U odoo -d odoo"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  odoo19-db-only-data:
