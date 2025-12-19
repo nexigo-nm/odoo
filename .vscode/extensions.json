@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.debugpy",
+    "Anysphere.vscode-pyright",
+    "ms-azuretools.vscode-docker",
+    "ms-azuretools.vscode-container-tools",
+    "cweijan.vscode-database-client",
+    "cweijan.vscode-mysql"
+  ]
+}
+
