@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "./custom-addons/motorcycle_financing",
+			"name": "motorcycle_financing"
+		}
+	],
+	"settings": {
+		"python.defaultInterpreterPath": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+		"git.detectSubmodules": true,
+		"git.autoRepositoryDetection": true
+	}
+}
+
