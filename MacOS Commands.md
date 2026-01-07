@@ -1,0 +1,2 @@
+python3 odoo-bin shell -d odoo --db_host localhost --db_port 5433 --db_user odoo --db_password odoo --addons-path=/Users/nick/PycharmProjects/enterprise-19.0,/Users/nick/PycharmProjects/odoo/custom-addons
+env['loan.application'].search_read([])
