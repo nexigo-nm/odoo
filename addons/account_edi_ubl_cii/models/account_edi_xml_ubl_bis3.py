@@ -127,6 +127,11 @@ class AccountEdiXmlUbl_Bis3(models.AbstractModel):
                 'cac:Address': self._get_address_node({'partner': shipping_partner})
             },
         }
+        # TODO master: clean that code a bit hacky, when the module account_add_gln is merged with account
+        if gln := 'global_location_number' in shipping_partner._fields and shipping_partner.global_location_number:
+            document_node['cac:Delivery']['cac:DeliveryLocation'].update({
+                'cbc:ID': {'schemeID': '0088', '_text': gln},
+            })
 
     def _add_invoice_payment_means_nodes(self, document_node, vals):
         super()._add_invoice_payment_means_nodes(document_node, vals)
@@ -237,6 +242,14 @@ class AccountEdiXmlUbl_Bis3(models.AbstractModel):
     # -------------------------------------------------------------------------
     # EXPORT: Gathering data
     # -------------------------------------------------------------------------
+
+    def _ubl_default_tax_subtotal_tax_category_grouping_key(self, tax_grouping_key, vals):
+        # EXTENDS
+        return {
+            **super()._ubl_default_tax_subtotal_tax_category_grouping_key(tax_grouping_key, vals),
+            # Temporary solution to have withholding taxes merged with others until we know how to manage them.
+            'is_withholding': False,
+        }
 
     def _setup_base_lines(self, vals):
         # OVERRIDE
@@ -527,7 +540,7 @@ class AccountEdiXmlUbl_Bis3(models.AbstractModel):
         line_nodes = vals['document_node'][line_tag]
 
         for line_node in line_nodes:
-            if not line_node['cac:Item']['cbc:Name']['_text']:
+            if not (line_node['cac:Item']['cbc:Name'] or {}).get('_text'):
                 # [BR-25]-Each Invoice line (BG-25) shall contain the Item name (BT-153).
                 constraints.update({'cen_en16931_item_name': _("Each invoice line should have a product or a label.")})
                 break

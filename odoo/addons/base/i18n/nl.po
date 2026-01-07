@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-09 12:16+0000\n"
-"PO-Revision-Date: 2025-12-10 16:52+0000\n"
+"PO-Revision-Date: 2025-12-30 07:30+0000\n"
 "Last-Translator: Bren Driesen <brdri@odoo.com>\n"
 "Language-Team: Dutch <https://translate.odoo.com/projects/odoo-19/base/nl/>\n"
 "Language: nl\n"
@@ -22167,7 +22167,7 @@ msgstr "Bowlingbaan"
 #: model:ir.model.fields,field_description:base.field_res_company__child_ids
 #: model_terms:ir.ui.view,arch_db:base.view_company_form
 msgid "Branches"
-msgstr "Branches"
+msgstr "Filialen"
 
 #. module: base
 #: model_terms:res.partner,website_description:base.res_partner_address_15
@@ -25753,8 +25753,8 @@ msgid ""
 "Demo data should only be used on test databases!\n"
 "                             Once they are loaded, they cannot be removed!"
 msgstr ""
-"Demo data zou alleen gebruikt moeten worden op test databases!\n"
-"Als de demo data geladen is kan deze niet meer verwijderd worden!"
+"Gebruik Demodata enkel in testdatabases!\n"
+"Als de Demodata geladen zijn, kunnen ze niet meer verwijderd worden!"
 
 #. module: base
 #: model:ir.model,name:base.model_ir_demo_failure
@@ -33600,7 +33600,7 @@ msgstr "Koppeling tussen Kassa en Voorraadverhuur."
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_online_payment_self_order_preparation_display
 msgid "Link between self orders paid online and the preparation display"
-msgstr "Link tussen online betaalde self-orders en het keukenscherm"
+msgstr "Link tussen online betaalde self-orders en het voorbereidingsscherm"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_timesheet_grid_holidays
@@ -39746,7 +39746,7 @@ msgstr "Kassa zelfbediening / Online betaling"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_online_payment_self_order_preparation_display
 msgid "POS Self-Order / Online Payment / Preparation Display"
-msgstr "Kassa zelfbediening / Online betaling / Keukenscherm"
+msgstr "Kassa zelfbediening / Online betaling / Voorbereidingsscherm"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_stripe
@@ -40849,8 +40849,8 @@ msgid ""
 "Please confirm that you want to <b>irreversibly</b> make this database a "
 "demo database."
 msgstr ""
-"Bevestig alsjeblieft dat je van deze database een demo database wilt maken, "
-"deze optie is <b>onomkeerbaar</b>."
+"Bevestig alsjeblieft dat je van deze database een testdatabase wilt maken, "
+"want deze optie is <b>onomkeerbaar</b>."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_access_view_form
@@ -40898,7 +40898,7 @@ msgstr "Kassaorder volgen Klantendisplay"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_restaurant_preparation_display
 msgid "PoS Preparation Display Restaurant"
-msgstr "Kassa Keukenscherm Restaurant"
+msgstr "Kassa Voorbereidingsscherm Restaurant"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_pricer
@@ -44569,7 +44569,7 @@ msgstr "API Key weergeven"
 #: model:ir.model.fields,field_description:base.field_base_module_uninstall__show_all
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_uninstall
 msgid "Show All"
-msgstr "Alles weergaven"
+msgstr "Alles weergeven"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_server__show_code_history
@@ -48343,7 +48343,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_productivity_to-do
 #: model:ir.module.module,shortdesc:base.module_project_todo
 msgid "To-Do"
-msgstr "To-Do"
+msgstr "To-do"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_actions_todo_tree
@@ -48476,7 +48476,7 @@ msgstr "Beheer leads en sluit pospects"
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_recruitment
 msgid "Track your recruitment pipeline"
-msgstr "Beheer je werving en selectie pijplijn.]"
+msgstr "Beheer je pijplijn voor werving en selectie"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_helpdesk

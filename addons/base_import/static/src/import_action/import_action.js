@@ -93,7 +93,9 @@ export class ImportAction extends Component {
 
     async onWillStart() {
         const action = await this.actionService.currentAction;
-        const activeModel = this.props.action.params?.active_model;
+        // this.props.action.params.model is there for retro-compatiblity issues
+        const activeModel =
+            this.props.action.params?.model || this.props.action.params?.active_model;
         if (activeModel) {
             this.resModel = activeModel;
             if (action?.type === "ir.actions.act_window" && action?.res_model === this.resModel) {
@@ -260,6 +262,9 @@ export class ImportAction extends Component {
 
         if (res.ids.length) {
             if (!isTest) {
+                if (res.hasError) {
+                    return;
+                }
                 this.notification.add(_t("%s records successfully imported", res.ids.length), {
                     type: "success",
                 });

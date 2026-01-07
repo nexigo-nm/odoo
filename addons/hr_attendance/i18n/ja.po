@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.5alpha1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-07 18:35+0000\n"
-"PO-Revision-Date: 2025-12-11 13:00+0000\n"
+"POT-Creation-Date: 2025-12-30 18:36+0000\n"
+"PO-Revision-Date: 2025-12-24 08:42+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19/"
 "hr_attendance/ja/>\n"
@@ -96,9 +96,8 @@ msgid ""
 "<span class=\"fw-bold\" invisible=\"base_off != 'timing' or timing_type not "
 "in ['work_days', 'non_work_days']\">Between</span>"
 msgstr ""
-"<span class=\"fw-bold\" invisible="
-"\"base_off != 'timing' or timing_type not in ['work_days', 'non_work_days']\""
-">以下の間</span>"
+"<span class=\"fw-bold\" invisible=\"base_off != 'timing' or timing_type not "
+"in ['work_days', 'non_work_days']\">以下の間</span>"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.res_config_settings_view_form
@@ -260,7 +259,8 @@ msgstr "従業員のために、時間外労働が控除されない時間（就
 msgid ""
 "Allow the collection of GPS location, IP address, and browser/device details "
 "used to track employee access and attendance"
-msgstr "従業員のアクセスおよび出勤状況を追跡するために、GPS位置情報、IPアドレス、ブラ"
+msgstr ""
+"従業員のアクセスおよび出勤状況を追跡するために、GPS位置情報、IPアドレス、ブラ"
 "ウザ／デバイスの詳細の収集を許可します"
 
 #. module: hr_attendance
@@ -1269,7 +1269,7 @@ msgstr "キオスク設定"
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_filter
 msgid "Last 3 Months"
-msgstr "過去3か月"
+msgstr "直近3か月"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_employee__last_attendance_id
@@ -1423,7 +1423,6 @@ msgstr "不足しているデータ"
 #. module: hr_attendance
 #. odoo-javascript
 #: code:addons/hr_attendance/static/src/views/badge_scanner/badge_scanner.js:0
-#, fuzzy
 msgid "Missing Employee ID"
 msgstr "従業員IDが欠落しています"
 
@@ -1642,7 +1641,7 @@ msgstr "時間外労働ステータス"
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_overtime_line__amount_rate
 msgid "Overtime pay rate"
-msgstr ""
+msgstr "残業時間の単価"
 
 #. module: hr_attendance
 #: model:ir.ui.menu,name:hr_attendance.menu_hr_attendance_overview
@@ -1652,12 +1651,12 @@ msgstr "概要"
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_overtime_rule__paid
 msgid "Pay Extra Hours"
-msgstr ""
+msgstr "追加勤務時間の支払い"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_rule_view_form
 msgid "Pay extra hours"
-msgstr ""
+msgstr "追加勤務時間の支払い"
 
 #. module: hr_attendance
 #. odoo-javascript
@@ -1676,7 +1675,7 @@ msgstr "メインメニューに戻ります。"
 #. odoo-javascript
 #: code:addons/hr_attendance/static/src/components/new_employee_dialog/new_employee_dialog.js:0
 msgid "Please select an employee and enter a badge number."
-msgstr ""
+msgstr "従業員を選択し、バッジ番号を入力してください。"
 
 #. module: hr_attendance
 #. odoo-javascript
@@ -1702,7 +1701,7 @@ msgstr "数量"
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_overtime_rule__quantity_period
 msgid "Quantity Period"
-msgstr ""
+msgstr "数量期間"
 
 #. module: hr_attendance
 #. odoo-javascript
@@ -1719,7 +1718,7 @@ msgstr "リーダ付FRIDトークン(タブレット)"
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_form_inherit_hr_attendance
 msgid "RFID/Badge Number"
-msgstr ""
+msgstr "RFID/バッジ番号"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_overtime_rule__amount_rate
@@ -1729,13 +1728,13 @@ msgstr "レート"
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_overtime_ruleset__rate_combination_mode
 msgid "Rate Combination Mode"
-msgstr ""
+msgstr "レート組み合わせ方式"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_ruleset_view_filter
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_ruleset_view_list
 msgid "Rate Mode"
-msgstr ""
+msgstr "レート方式"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance__rating_ids
@@ -1745,7 +1744,7 @@ msgstr "評価"
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_form_inherit_hr_attendance
 msgid "Read a badge"
-msgstr ""
+msgstr "バッジを読む"
 
 #. module: hr_attendance
 #. odoo-javascript
@@ -1767,7 +1766,7 @@ msgstr "時間外労働を拒否"
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_form
 msgid "Refuse all overtimes for the same employee and date"
-msgstr ""
+msgstr "同一従業員・同一日付における全ての残業時間を拒否"
 
 #. module: hr_attendance
 #: model:ir.model.fields.selection,name:hr_attendance.selection__hr_attendance__overtime_status__refused
@@ -1779,7 +1778,7 @@ msgstr "否認"
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_ruleset_view_form
 msgid "Regenerate overtimes"
-msgstr ""
+msgstr "残業時間を再計算"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_ruleset_view_form
@@ -1808,14 +1807,16 @@ msgstr "ルール「%(name)s 」は数量に基づいているが、期間は指
 msgid ""
 "Rule '%(name)s' is based off quantity, but the usual amount of work hours is "
 "not specified"
-msgstr "ルール「%(name)s 」は数量に基づくが、通常の勤務時間数は明記されていません"
+msgstr ""
+"ルール「%(name)s 」は数量に基づくが、通常の勤務時間数は明記されていません"
 
 #. module: hr_attendance
 #. odoo-python
 #: code:addons/hr_attendance/models/hr_attendance_overtime_rule.py:0
 msgid ""
 "Rule '%(name)s' is based off timing, but the work schedule is not specified"
-msgstr "ルール「%(name)s 」はタイミングに基づいているが、作業スケジュールは指定されて"
+msgstr ""
+"ルール「%(name)s 」はタイミングに基づいているが、作業スケジュールは指定されて"
 "いません"
 
 #. module: hr_attendance
@@ -1859,13 +1860,13 @@ msgstr "SMS送信エラー"
 #. odoo-javascript
 #: code:addons/hr_attendance/static/src/views/badge_scanner/badge_scanner.xml:0
 msgid "Scan Badge"
-msgstr ""
+msgstr "バッジをスキャン"
 
 #. module: hr_attendance
 #. odoo-javascript
 #: code:addons/hr_attendance/static/src/views/badge_scanner/badge_scanner.xml:0
 msgid "Scan or Tap your badge"
-msgstr ""
+msgstr "バッジをスキャンまたはタップ"
 
 #. module: hr_attendance
 #. odoo-javascript
@@ -1894,7 +1895,7 @@ msgstr "検索..."
 #. odoo-javascript
 #: code:addons/hr_attendance/static/src/components/new_employee_dialog/new_employee_dialog.xml:0
 msgid "Select Employee Without Badge"
-msgstr ""
+msgstr "バッジのない従業員を選択"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_form_inherit_hr_attendance
@@ -1921,13 +1922,13 @@ msgstr "従業員詳細フォーム(HR設定タブより)でPINコードを設�
 #. odoo-javascript
 #: code:addons/hr_attendance/static/src/components/new_employee_dialog/new_employee_dialog.xml:0
 msgid "Set the Badge"
-msgstr ""
+msgstr "バッジを設定"
 
 #. module: hr_attendance
 #. odoo-javascript
 #: code:addons/hr_attendance/static/src/components/new_employee_dialog/new_employee_dialog.js:0
 msgid "Set-up"
-msgstr ""
+msgstr "セットアップ"
 
 #. module: hr_attendance
 #: model:ir.actions.act_window,name:hr_attendance.action_hr_attendance_settings
@@ -1971,7 +1972,7 @@ msgstr "停止"
 #. module: hr_attendance
 #: model:ir.model.fields.selection,name:hr_attendance.selection__hr_attendance_overtime_ruleset__rate_combination_mode__sum
 msgid "Sum of all rates"
-msgstr ""
+msgstr "全料金の合計"
 
 #. module: hr_attendance
 #: model:ir.model.fields.selection,name:hr_attendance.selection__hr_attendance__in_mode__systray
@@ -1984,6 +1985,14 @@ msgstr "Systray"
 #: model:ir.model.fields.selection,name:hr_attendance.selection__hr_attendance__out_mode__technical
 msgid "Technical"
 msgstr "技術設定"
+
+#. module: hr_attendance
+#: model:ir.model.fields,help:hr_attendance.field_hr_attendance_overtime_rule__expected_hours_from_contract
+msgid ""
+"The attendance can go into negative extra hours to represent the missing "
+"hours compared to what is expected if the Absence Management setting is "
+"enabled."
+msgstr ""
 
 #. module: hr_attendance
 #. odoo-javascript
@@ -2063,17 +2072,17 @@ msgstr "タイミング"
 #. module: hr_attendance
 #: model:ir.model.constraint,message:hr_attendance.constraint_hr_attendance_overtime_rule_timing_start_is_hour
 msgid "Timing Start is an hour of the day"
-msgstr ""
+msgstr "開始時刻は1日の「時（0～23）」で指定する必要があります"
 
 #. module: hr_attendance
 #: model:ir.model.constraint,message:hr_attendance.constraint_hr_attendance_overtime_rule_timing_stop_is_hour
 msgid "Timing Stop is an hour of the day"
-msgstr ""
+msgstr "終了時刻は、1日の「時（0～23）」で指定する必要があります"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_overtime_rule__timing_type
 msgid "Timing Type"
-msgstr ""
+msgstr "タイミングタイプ"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_overtime_rule__timing_stop
@@ -2177,7 +2186,7 @@ msgstr "ユーザ: 自分の出勤記録を見る"
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_overtime_rule__expected_hours
 msgid "Usual work hours"
-msgstr ""
+msgstr "通常の勤務時間"
 
 #. module: hr_attendance
 #. odoo-javascript
@@ -2214,12 +2223,17 @@ msgstr "ようこそ！"
 #. module: hr_attendance
 #: model:ir.model.fields.selection,name:hr_attendance.selection__hr_attendance_overtime_rule__timing_type__leave
 msgid "When employee is off"
+msgstr "従業員が不在のとき"
+
+#. module: hr_attendance
+#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_rule_view_form
+msgid "With a tolerance in favor of the employee of"
 msgstr ""
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_rule_view_form
 msgid "With a tolerance in favor of the employer of"
-msgstr ""
+msgstr "雇用者(会社)側に有利な許容範囲を設ける"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_employee_simple_tree_view
@@ -2273,11 +2287,6 @@ msgstr "そのアクションを実行する権限がありません。"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_rule_view_form
-msgid "a specific duration"
-msgstr ""
-
-#. module: hr_attendance
-#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_rule_view_form
 msgid "and"
 msgstr "及び"
 
@@ -2300,6 +2309,11 @@ msgid "day"
 msgstr "日"
 
 #. module: hr_attendance
+#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_rule_view_form
+msgid "differs"
+msgstr ""
+
+#. module: hr_attendance
 #. odoo-javascript
 #: code:addons/hr_attendance/static/src/components/new_employee_dialog/new_employee_dialog.xml:0
 msgid "e.g. John Doe"
@@ -2307,18 +2321,22 @@ msgstr "例: 鈴木 一郎"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_ruleset_view_form
-#, fuzzy
 msgid "e.g. Legal Rules"
 msgstr "例：法的規則"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_rule_view_form
 msgid "e.g. Over 8 hours daily"
+msgstr "例：1日8時間以上"
+
+#. module: hr_attendance
+#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_rule_view_form
+msgid "from a specific duration"
 msgstr ""
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_rule_view_form
-msgid "exceed"
+msgid "from the amount defined on the contract"
 msgstr ""
 
 #. module: hr_attendance
@@ -2339,11 +2357,6 @@ msgid "or"
 msgstr "または"
 
 #. module: hr_attendance
-#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_rule_view_form
-msgid "the amount defined on the contract"
-msgstr ""
-
-#. module: hr_attendance
 #. odoo-python
 #: code:addons/hr_attendance/models/hr_attendance_overtime_rule.py:0
 msgid "week"
@@ -2352,13 +2365,22 @@ msgstr "週"
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_overtime_rule_view_form
 msgid "with a rate of"
-msgstr ""
+msgstr "以下の割合で："
 
 #. module: hr_attendance
 #. odoo-javascript
 #: code:addons/hr_attendance/static/src/public_kiosk/public_kiosk_app.xml:0
 msgid "with optional PIN code"
 msgstr "オプションPINコードで"
+
+#~ msgid "a specific duration"
+#~ msgstr "特定の期間"
+
+#~ msgid "exceed"
+#~ msgstr "超過"
+
+#~ msgid "the amount defined on the contract"
+#~ msgstr "契約書に定められた金額"
 
 #~ msgid ""
 #~ "<span class=\"fw-bold\" invisible=\"base_off != 'timing' or timing_type "
