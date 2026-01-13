@@ -6,6 +6,10 @@
 		{
 			"path": "./custom-addons/motorcycle_financing",
 			"name": "motorcycle_financing"
+		},
+		{
+			"path": "./custom-addons/ansprechpartner",
+			"name": "ansprechpartner"
 		}
 	],
 	"settings": {
