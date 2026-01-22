@@ -1,0 +1,87 @@
+# Odoo Docker Compose Configuration - Full Stack
+# This file runs the complete Odoo stack (database + Odoo server)
+#
+# Usage:
+#   docker-compose -f docker-compose-full.yml -p odoo-full up -d
+#   docker-compose -f docker-compose-full.yml -p odoo-full down
+#
+# The -p flag sets a unique project name to avoid conflicts with docker-compose-db-only.yml
+#
+# Environment Variables:
+#   ODOO_CUSTOM_ADDONS_PATH - Path to custom addons directory (default: /Users/nick/PycharmProjects/odoo/custom-addons)
+#   ODOO_ENTERPRISE_ADDONS_PATH - Path to enterprise addons directory (default: /Users/nick/PycharmProjects/enterprise-19.0)
+#
+# To customize paths, create a .env file in this directory with:
+#   ODOO_CUSTOM_ADDONS_PATH=/your/path/to/custom-addons
+#   ODOO_ENTERPRISE_ADDONS_PATH=/your/path/to/enterprise-19.0
+#
+# Or set them as environment variables before running docker-compose
+
+name: odoo-full
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: odoo18-db
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+      POSTGRES_DB: odoo
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - odoo18-db-data:/var/lib/postgresql/data/pgdata
+      # Ensure the pgvector extension is created on first init of the "odoo" database
+      - ./config/initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U odoo -d odoo"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  odoo-init:
+    image: odoo:18.0
+    container_name: odoo18-init
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - ODOO_RC=/etc/odoo/odoo-docker.conf
+      - DB_NAME=odoo
+    command: ["/bin/bash", "/etc/odoo/init-odoo.sh"]
+    volumes:
+      - odoo18-web-data:/var/lib/odoo
+      - ./config:/etc/odoo
+      - ${ODOO_CUSTOM_ADDONS_PATH}:/mnt/extra-addons/custom
+      - ${ODOO_ENTERPRISE_ADDONS_18_PATH}:/mnt/extra-addons/enterprise
+    restart: "no"
+    healthcheck:
+      test: ["CMD-SHELL", "test -f /var/lib/odoo/.odoo_initialized && echo 'Initialization complete' || exit 1"]
+      interval: 2s
+      timeout: 2s
+      retries: 3
+      start_period: 30s
+
+  odoo:
+    image: odoo:18.0
+    container_name: odoo18
+    depends_on:
+      db:
+        condition: service_healthy
+      odoo-init:
+        condition: service_healthy
+    ports:
+      - "8069:8069"
+    environment:
+      - ODOO_RC=/etc/odoo/odoo-docker.conf
+    volumes:
+      - odoo18-web-data:/var/lib/odoo
+      - ./config:/etc/odoo
+      - ${ODOO_CUSTOM_ADDONS_PATH}:/mnt/extra-addons/custom
+      - ${ODOO_ENTERPRISE_ADDONS_18_PATH}:/mnt/extra-addons/enterprise
+
+volumes:
+  odoo18-db-data:
+  odoo18-web-data:
